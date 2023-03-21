@@ -56,15 +56,39 @@
 		4040E83329CA263800429ED2 /* RickMorty */ = {
 			isa = PBXGroup;
 			children = (
+				4040E84A29CA292200429ED2 /* Controllers */,
+				4040E84929CA291A00429ED2 /* Views */,
+				4040E84829CA290F00429ED2 /* Models */,
 				4040E83429CA263800429ED2 /* AppDelegate.swift */,
 				4040E83629CA263800429ED2 /* SceneDelegate.swift */,
-				4040E83829CA263800429ED2 /* ViewController.swift */,
-				4040E83A29CA263800429ED2 /* Main.storyboard */,
 				4040E83D29CA263900429ED2 /* Assets.xcassets */,
 				4040E83F29CA263900429ED2 /* LaunchScreen.storyboard */,
 				4040E84229CA263900429ED2 /* Info.plist */,
 			);
 			path = RickMorty;
+			sourceTree = "<group>";
+		};
+		4040E84829CA290F00429ED2 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		4040E84929CA291A00429ED2 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				4040E83A29CA263800429ED2 /* Main.storyboard */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		4040E84A29CA292200429ED2 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				4040E83829CA263800429ED2 /* ViewController.swift */,
+			);
+			path = Controllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
