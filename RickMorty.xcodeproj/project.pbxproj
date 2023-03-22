@@ -69,7 +69,6 @@
 				4040E83429CA263800429ED2 /* AppDelegate.swift */,
 				4040E83629CA263800429ED2 /* SceneDelegate.swift */,
 				4040E83D29CA263900429ED2 /* Assets.xcassets */,
-				4040E83F29CA263900429ED2 /* LaunchScreen.storyboard */,
 				4040E84229CA263900429ED2 /* Info.plist */,
 			);
 			path = RickMorty;
@@ -86,6 +85,7 @@
 			isa = PBXGroup;
 			children = (
 				4040E83A29CA263800429ED2 /* Main.storyboard */,
+				4040E83F29CA263900429ED2 /* LaunchScreen.storyboard */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -112,7 +112,6 @@
 				C1E95174B5E93D177B13BFA1 /* Pods-RickMorty.debug.xcconfig */,
 				41E5D1E80861C6EEBFCE4907 /* Pods-RickMorty.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
