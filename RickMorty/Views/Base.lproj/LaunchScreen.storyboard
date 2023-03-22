@@ -15,20 +15,33 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Rick-and-Morty" translatesAutoresizingMaskIntoConstraints="NO" id="ytY-be-Qvl">
-                                <rect key="frame" x="-2" y="215" width="395" height="423"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Rick-and-Morty" translatesAutoresizingMaskIntoConstraints="NO" id="ytY-be-Qvl">
+                                <rect key="frame" x="16" y="-87" width="361" height="1026"/>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Rick and Morty" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fpJ-K6-xVW">
-                                <rect key="frame" x="60" y="148" width="291" height="59"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="Impact" family="Impact" pointSize="48"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="tzq-ob-T5v">
+                                <rect key="frame" x="74" y="161" width="245" height="58.666666666666657"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Rick &amp; Morty" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fpJ-K6-xVW">
+                                        <rect key="frame" x="0.0" y="0.0" width="245" height="58.666666666666664"/>
+                                        <fontDescription key="fontDescription" name="Impact" family="Impact" pointSize="48"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" red="0.6029052433853147" green="0.67440772802867133" blue="0.51026327872797195" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstItem="ytY-be-Qvl" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="0d2-S8-3Nc"/>
+                            <constraint firstItem="tzq-ob-T5v" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="Hgg-R3-Eud"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="ytY-be-Qvl" secondAttribute="trailing" constant="16" id="Jp2-8x-35w"/>
+                            <constraint firstItem="ytY-be-Qvl" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="OeW-Cb-sf8"/>
+                            <constraint firstItem="tzq-ob-T5v" firstAttribute="leading" relation="lessThanOrEqual" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="74" id="RI1-sV-Yse"/>
+                            <constraint firstItem="tzq-ob-T5v" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="102" id="eBZ-1N-nW5"/>
+                            <constraint firstItem="ytY-be-Qvl" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="lPr-wo-cvI"/>
+                            <constraint firstItem="ytY-be-Qvl" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="lSU-Ot-nQz"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iYj-Kq-Ea1" userLabel="First Responder" sceneMemberID="firstResponder"/>
