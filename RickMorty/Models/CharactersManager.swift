@@ -9,4 +9,8 @@ import Foundation
 
 struct CharactersManager {
     let charactersURL = "https://rickandmortyapi.com/api/character"
+    
+    func fetchCaracters() {
+        
+    }
 }
