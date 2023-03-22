@@ -9,10 +9,11 @@
 /* Begin PBXBuildFile section */
 		4040E83529CA263800429ED2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4040E83429CA263800429ED2 /* AppDelegate.swift */; };
 		4040E83729CA263800429ED2 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4040E83629CA263800429ED2 /* SceneDelegate.swift */; };
-		4040E83929CA263800429ED2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4040E83829CA263800429ED2 /* ViewController.swift */; };
+		4040E83929CA263800429ED2 /* CharacterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4040E83829CA263800429ED2 /* CharacterViewController.swift */; };
 		4040E83C29CA263800429ED2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4040E83A29CA263800429ED2 /* Main.storyboard */; };
 		4040E83E29CA263900429ED2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4040E83D29CA263900429ED2 /* Assets.xcassets */; };
 		4040E84129CA263900429ED2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4040E83F29CA263900429ED2 /* LaunchScreen.storyboard */; };
+		4040E84C29CAF72500429ED2 /* CharactersManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4040E84B29CAF72500429ED2 /* CharactersManager.swift */; };
 		907787B3FF6A156FA3EC3E43 /* Pods_RickMorty.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 56B1E241956955845A9EBDE1 /* Pods_RickMorty.framework */; };
 /* End PBXBuildFile section */
 
@@ -20,11 +21,12 @@
 		4040E83129CA263700429ED2 /* RickMorty.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RickMorty.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4040E83429CA263800429ED2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4040E83629CA263800429ED2 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		4040E83829CA263800429ED2 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		4040E83829CA263800429ED2 /* CharacterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterViewController.swift; sourceTree = "<group>"; };
 		4040E83B29CA263800429ED2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		4040E83D29CA263900429ED2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4040E84029CA263900429ED2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4040E84229CA263900429ED2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4040E84B29CAF72500429ED2 /* CharactersManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharactersManager.swift; sourceTree = "<group>"; };
 		41E5D1E80861C6EEBFCE4907 /* Pods-RickMorty.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RickMorty.release.xcconfig"; path = "Target Support Files/Pods-RickMorty/Pods-RickMorty.release.xcconfig"; sourceTree = "<group>"; };
 		56B1E241956955845A9EBDE1 /* Pods_RickMorty.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RickMorty.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C1E95174B5E93D177B13BFA1 /* Pods-RickMorty.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RickMorty.debug.xcconfig"; path = "Target Support Files/Pods-RickMorty/Pods-RickMorty.debug.xcconfig"; sourceTree = "<group>"; };
@@ -63,11 +65,11 @@
 		4040E83329CA263800429ED2 /* RickMorty */ = {
 			isa = PBXGroup;
 			children = (
-				4040E84A29CA292200429ED2 /* Controllers */,
-				4040E84929CA291A00429ED2 /* Views */,
-				4040E84829CA290F00429ED2 /* Models */,
 				4040E83429CA263800429ED2 /* AppDelegate.swift */,
 				4040E83629CA263800429ED2 /* SceneDelegate.swift */,
+				4040E84829CA290F00429ED2 /* Models */,
+				4040E84929CA291A00429ED2 /* Views */,
+				4040E84A29CA292200429ED2 /* Controllers */,
 				4040E83D29CA263900429ED2 /* Assets.xcassets */,
 				4040E84229CA263900429ED2 /* Info.plist */,
 			);
@@ -77,6 +79,7 @@
 		4040E84829CA290F00429ED2 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				4040E84B29CAF72500429ED2 /* CharactersManager.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -93,7 +96,7 @@
 		4040E84A29CA292200429ED2 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				4040E83829CA263800429ED2 /* ViewController.swift */,
+				4040E83829CA263800429ED2 /* CharacterViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -230,7 +233,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4040E83929CA263800429ED2 /* ViewController.swift in Sources */,
+				4040E83929CA263800429ED2 /* CharacterViewController.swift in Sources */,
+				4040E84C29CAF72500429ED2 /* CharactersManager.swift in Sources */,
 				4040E83529CA263800429ED2 /* AppDelegate.swift in Sources */,
 				4040E83729CA263800429ED2 /* SceneDelegate.swift in Sources */,
 			);
