@@ -1,16 +1,22 @@
 PODS:
+  - Apollo (1.0.7):
+    - Apollo/Core (= 1.0.7)
+  - Apollo/Core (1.0.7)
   - CLTypingLabel (0.4.0)
 
 DEPENDENCIES:
+  - Apollo (~> 1.0)
   - CLTypingLabel (~> 0.4.0)
 
 SPEC REPOS:
   trunk:
+    - Apollo
     - CLTypingLabel
 
 SPEC CHECKSUMS:
+  Apollo: 4db36a7f08ded7a9f73a72eb90457d98dc4c68f9
   CLTypingLabel: 95a7d1faf7e3d1d952cd11cb0491d17d80c50934
 
-PODFILE CHECKSUM: 2cd496dbb7ab4a78b8058cd3821a7d0774b1513f
+PODFILE CHECKSUM: 7cca14f66cf3b49f3a3eb4a0d047419d9c83d40c
 
 COCOAPODS: 1.12.0

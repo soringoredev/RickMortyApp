@@ -1,4 +1,4 @@
-platform :ios, '10.0'
+platform :ios, '13.0'
 
 target 'RickMorty' do
   use_frameworks!
@@ -6,5 +6,6 @@ target 'RickMorty' do
   # Pods for RickMorty
   
   pod 'CLTypingLabel', '~> 0.4.0'
+  pod 'Apollo', '~> 1.0'
 
 end
