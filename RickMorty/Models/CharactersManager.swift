@@ -32,14 +32,14 @@ public struct CharactersResponse: Decodable {
 //        public let type: String
 //        public let gender: String
 //        public let origin: Location
-//        public let location: Location
-//        public let image: String
+        public let location: Location
+        public let image: String
 //        public let episodes: [String]
 //        public let url: String
 //        public let created: String
         
         enum CodingKeys: String, CodingKey {
-            case name, status
+            case name, status, location, image
             
         }
     }

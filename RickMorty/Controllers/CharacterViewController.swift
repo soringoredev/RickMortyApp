@@ -33,6 +33,7 @@ class CharacterViewController: UIViewController, UITableViewDataSource{
     @IBOutlet weak var nameCharacter: UILabel!
     
     @IBOutlet weak var lastKnownLocation: UILabel!
+    @IBOutlet weak var episode: UILabel!
     @IBOutlet weak var firstSeenIn: UILabel!
     
     override func viewDidLoad() {
@@ -62,6 +63,13 @@ class CharacterViewController: UIViewController, UITableViewDataSource{
                 do {
                     let parsingData = try decoder.decode(CharactersResponse.Character.self, from: data!)
                     print(parsingData)
+                    DispatchQueue.main.async {
+                        self.nameCharacter.text = parsingData.name
+                      //  self.lastKnownLocation.text = parsingData
+                        self.firstSeenIn.text = parsingData.status
+                       //self.profileImage = parsingData.image
+                        
+                        }
                 } catch {
                     print("Parsing error")
                 }
