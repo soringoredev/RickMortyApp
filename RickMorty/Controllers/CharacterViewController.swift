@@ -63,11 +63,13 @@ class CharacterViewController: UIViewController, UITableViewDataSource{
                 do {
                     let parsingData = try decoder.decode(CharactersResponse.Character.self, from: data!)
                     print(parsingData)
-                    DispatchQueue.main.async {
-                        self.nameCharacter.text = parsingData.name
+                    DispatchQueue.main.async { [self] in
+                        nameCharacter.text = parsingData.name
                       //  self.lastKnownLocation.text = parsingData
-                        self.firstSeenIn.text = parsingData.status
-                       //self.profileImage = parsingData.image
+                        firstSeenIn.text = parsingData.status
+                        
+                        profileImage.image = UIImage(contentsOfFile: parsingData.image)
+                       
                         
                         }
                 } catch {
