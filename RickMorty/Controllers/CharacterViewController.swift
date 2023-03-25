@@ -8,8 +8,6 @@
 import UIKit
 import Foundation
 import Apollo
-import ApolloAPI
-import RickMortySwiftApi
 
 class CharacterViewController: UIViewController, UITableViewDataSource{
     
@@ -29,7 +27,6 @@ class CharacterViewController: UIViewController, UITableViewDataSource{
 //    }()
     
     @IBOutlet weak var profileImage: UIImageView!
-    
     @IBOutlet weak var nameCharacter: UILabel!
     
     @IBOutlet weak var lastKnownLocation: UILabel!
@@ -38,13 +35,10 @@ class CharacterViewController: UIViewController, UITableViewDataSource{
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        //view.addSubview(tableView)
-       // tableView.dataSource = self
         parseJSON()
         
         
     }
-    let rmClient = RMClient()
 
     func parseJSON(){
         let urlString = "https://rickandmortyapi.com/api/character/2"
@@ -65,7 +59,7 @@ class CharacterViewController: UIViewController, UITableViewDataSource{
                     print(parsingData)
                     DispatchQueue.main.async { [self] in
                         nameCharacter.text = parsingData.name
-                      //  self.lastKnownLocation.text = parsingData
+                        lastKnownLocation.text = parsingData.location.name
                         firstSeenIn.text = parsingData.status
                         
                         
