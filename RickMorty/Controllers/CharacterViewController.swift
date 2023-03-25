@@ -68,6 +68,16 @@ class CharacterViewController: UIViewController, UITableViewDataSource{
                       //  self.lastKnownLocation.text = parsingData
                         firstSeenIn.text = parsingData.status
                         
+                        
+                        let urlImage = URL(string: parsingData.image)
+                        
+                        DispatchQueue.global().async {
+                            let data = try? Data(contentsOf: urlImage!) //make sure your image in this url does exist, otherwise unwrap in a if let check / try-catch
+                            DispatchQueue.main.async {
+                                profileImage.image = UIImage(data: data!)
+                            }
+                        }
+                        
                         profileImage.image = UIImage(contentsOfFile: parsingData.image)
                        
                         
