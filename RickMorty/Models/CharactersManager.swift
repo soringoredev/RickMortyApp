@@ -25,19 +25,10 @@ public struct CharactersResponse: Decodable {
     }
     
     public struct Character: Decodable {
-       // public let id: Int
         public let name: String
         public let status: String
-//        public let species: String
-//        public let type: String
-//        public let gender: String
-//        public let origin: Location
         public let location: Location
         public let image: String
-//        public let episodes: [String]
-//        public let url: String
-//        public let created: String
-        
         enum CodingKeys: String, CodingKey {
             case name, status, location, image
             

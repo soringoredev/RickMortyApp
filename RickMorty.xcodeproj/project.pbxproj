@@ -16,6 +16,7 @@
 		4040E84C29CAF72500429ED2 /* CharactersManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4040E84B29CAF72500429ED2 /* CharactersManager.swift */; };
 		4040E86529CB255400429ED2 /* RickMortySwiftApi in Frameworks */ = {isa = PBXBuildFile; productRef = 4040E86429CB255400429ED2 /* RickMortySwiftApi */; };
 		4040E86929CB2B2500429ED2 /* OrderedCollections in Frameworks */ = {isa = PBXBuildFile; productRef = 4040E86829CB2B2500429ED2 /* OrderedCollections */; };
+		40BD81DB29D0C23C00C3C06A /* CharacterTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40BD81D929D0C23C00C3C06A /* CharacterTableViewCell.swift */; };
 		40D6510D29CC673B00FC1A81 /* schema.json in Resources */ = {isa = PBXBuildFile; fileRef = 40D6510C29CC673B00FC1A81 /* schema.json */; };
 		907787B3FF6A156FA3EC3E43 /* Pods_RickMorty.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 56B1E241956955845A9EBDE1 /* Pods_RickMorty.framework */; };
 /* End PBXBuildFile section */
@@ -30,6 +31,7 @@
 		4040E84029CA263900429ED2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4040E84229CA263900429ED2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4040E84B29CAF72500429ED2 /* CharactersManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharactersManager.swift; sourceTree = "<group>"; };
+		40BD81D929D0C23C00C3C06A /* CharacterTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterTableViewCell.swift; sourceTree = "<group>"; };
 		40D6510C29CC673B00FC1A81 /* schema.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = schema.json; sourceTree = SOURCE_ROOT; };
 		40D6511029CDB36D00FC1A81 /* Character.graphql.geojson */ = {isa = PBXFileReference; lastKnownFileType = text; path = Character.graphql.geojson; sourceTree = "<group>"; };
 		41E5D1E80861C6EEBFCE4907 /* Pods-RickMorty.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RickMorty.release.xcconfig"; path = "Target Support Files/Pods-RickMorty/Pods-RickMorty.release.xcconfig"; sourceTree = "<group>"; };
@@ -88,6 +90,7 @@
 			isa = PBXGroup;
 			children = (
 				4040E84B29CAF72500429ED2 /* CharactersManager.swift */,
+				40BD81D929D0C23C00C3C06A /* CharacterTableViewCell.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -261,6 +264,7 @@
 			files = (
 				4040E83929CA263800429ED2 /* CharacterViewController.swift in Sources */,
 				4040E84C29CAF72500429ED2 /* CharactersManager.swift in Sources */,
+				40BD81DB29D0C23C00C3C06A /* CharacterTableViewCell.swift in Sources */,
 				4040E83529CA263800429ED2 /* AppDelegate.swift in Sources */,
 				4040E83729CA263800429ED2 /* SceneDelegate.swift in Sources */,
 			);
