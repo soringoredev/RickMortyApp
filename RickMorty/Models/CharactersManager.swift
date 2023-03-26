@@ -40,3 +40,25 @@ public struct CharactersResponse: Decodable {
         public let url: String
     }
 }
+
+public struct EpisodesResponse: Decodable {
+    public let info: Info
+    public let results: [Episode]
+    
+    public struct Info: Decodable {
+        public var count: Int
+        public var pages: Int
+    }
+    
+    public struct Episode: Decodable {
+        public let id: Int
+        public let name: String
+        public let airDate: String
+        public let episode: String
+        public let characters: [String]
+        enum CodingKeys: String, CodingKey {
+            case id, name, airDate = "air_date", episode, characters
+        }
+    }
+}
+
