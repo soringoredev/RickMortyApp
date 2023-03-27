@@ -28,9 +28,10 @@ public struct CharactersResponse: Decodable {
         public let name: String
         public let status: String
         public let location: Location
+        let episode: [String]
         public let image: String
         enum CodingKeys: String, CodingKey {
-            case name, status, location, image
+            case name, status, location, image, episode
             
         }
     }

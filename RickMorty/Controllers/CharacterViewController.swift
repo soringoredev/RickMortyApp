@@ -25,7 +25,8 @@ class CharacterViewController: UIViewController, UITableViewDelegate, UITableVie
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.navigationItem.title = "Rick and Morty"
+        self.title = "Rick and Morty"
+        self.navigationController?.navigationBar.prefersLargeTitles = true
         
         table.register(CharactersTableViewCell.self, forCellReuseIdentifier: "cell")
         table.dataSource = self
@@ -112,8 +113,11 @@ class CharacterViewController: UIViewController, UITableViewDelegate, UITableVie
         }
 
         let character = characters[indexPath.row]
+       //
+        
         cell.nameLabel?.text = character.name
         cell.lastKnownLocationLabel?.text = character.location.name
+      //  cell.firstSeenInLabel.text = characterEpisode.self
         cell.characterImageView?.image = nil // resetează imaginea pentru a evita afișarea eronată a imaginii vechi
 
         if let url = URL(string: character.image) {
