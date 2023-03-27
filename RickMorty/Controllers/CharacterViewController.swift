@@ -15,13 +15,9 @@ class CharacterViewController: UIViewController, UITableViewDelegate, UITableVie
     
     var characterView: CharactersTableViewCell?
     var characters = [CharactersResponse.Character]()
-    var episodes: [String: EpisodesResponse.Episode] = [:]
 
-
-    
     @IBOutlet weak var table: UITableView!
     
-    var nameCharacter: CLTypingLabel!
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -32,10 +28,7 @@ class CharacterViewController: UIViewController, UITableViewDelegate, UITableVie
         table.delegate = self
         table.register(UINib(nibName: "CharactersTableViewCell", bundle: nil), forCellReuseIdentifier: "cell")
         parseJSON()
-        
     }
-    
-    
     
     func parseJSON() {
             let urlString = "https://rickandmortyapi.com/api/character/"
@@ -46,24 +39,16 @@ class CharacterViewController: UIViewController, UITableViewDelegate, UITableVie
                     print("Error fetching character: \(error)")
                     return
                 }
-                
                 guard let data = data else {
                     print("No data received")
                     return
                 }
-                
                 do {
                     let decoder = JSONDecoder()
                     let response = try decoder.decode(CharactersResponse.self, from: data)
-                 //   self.characters = response.name
                     DispatchQueue.main.async {
                         self.characters = response.results
-//                        self.characterView?.firstSeenInLabel.text = response.location.name
-//                        self.characterView?.nameLabel.text = response.name
-                      //  self.characterView?.nameLabel.text = response.results
-                       // print(character.name)
-                    
-                  //      self.characterView.lastKnownLocationLabel.text = character.location.name
+
                     }
                 } catch {
                     print("Error decoding character: \(error)")
@@ -90,13 +75,12 @@ class CharacterViewController: UIViewController, UITableViewDelegate, UITableVie
         }
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return characters.endIndex
+        return characters.count
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 110
     }
-
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = table.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as? CharactersTableViewCell else {

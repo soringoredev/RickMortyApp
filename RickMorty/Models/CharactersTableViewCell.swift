@@ -7,24 +7,14 @@
 
 import UIKit
 
-class CharactersTableViewCell: UITableViewCell {
-    
-    
-   // @IBOutlet weak var myTypeWriterLabel: CLTypingLabel!
-    
+class CharactersTableViewCell: UITableViewCell{
+
     
     @IBOutlet weak var characterImageView: UIImageView!
-    
     @IBOutlet weak var nameLabel: UILabel!
-    
     @IBOutlet weak var statusLabel: UILabel!
     @IBOutlet weak var lastKnownLocationLabel: UILabel!
     
-    @IBOutlet weak var firstSeenInLabel: UILabel!
-       
-        
-    
-
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
