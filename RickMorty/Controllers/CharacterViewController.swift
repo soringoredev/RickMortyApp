@@ -27,14 +27,10 @@ class CharacterViewController: UIViewController, UITableViewDelegate, UITableVie
         
         self.title = "Rick and Morty"
         self.navigationController?.navigationBar.prefersLargeTitles = true
-        
         table.register(CharactersTableViewCell.self, forCellReuseIdentifier: "cell")
         table.dataSource = self
         table.delegate = self
-        
         table.register(UINib(nibName: "CharactersTableViewCell", bundle: nil), forCellReuseIdentifier: "cell")
-
-        
         parseJSON()
         
     }
@@ -92,18 +88,13 @@ class CharacterViewController: UIViewController, UITableViewDelegate, UITableVie
                 }
             }.resume()
         }
-    
-    override func viewDidLayoutSubviews() {
-        super.viewDidLayoutSubviews()
-       // tableView.frame = view.bounds
-    }
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return characters.endIndex
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 110 // inaltimea dorita a celulelor
+        return 110
     }
 
     
@@ -111,22 +102,28 @@ class CharacterViewController: UIViewController, UITableViewDelegate, UITableVie
         guard let cell = table.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as? CharactersTableViewCell else {
             fatalError("Failed to dequeue CharacterTableViewCell")
         }
-
+        cell.backgroundColor = UIColor(red: 235/255, green: 248/255, blue: 184/255, alpha: 1.0)
         let character = characters[indexPath.row]
-       //
-        
+      
         cell.nameLabel?.text = character.name
         cell.lastKnownLocationLabel?.text = character.location.name
-      //  cell.firstSeenInLabel.text = characterEpisode.self
-        cell.characterImageView?.image = nil // resetează imaginea pentru a evita afișarea eronată a imaginii vechi
+        cell.characterImageView?.image = nil
+        cell.statusLabel.text = character.status
+        
+        if character.status == "Alive" {
+                cell.statusLabel.textColor = UIColor(red: 3/255, green: 156/255, blue: 26/255, alpha: 1.0)
+            } else if character.status == "Dead" {
+                cell.statusLabel.textColor = .red
+            } else {
+                cell.statusLabel.textColor = .black
+            }
 
         if let url = URL(string: character.image) {
             loadImage(from: url) { image in
-                cell.characterImageView?.image = image // afișează imaginea descărcată
+                cell.characterImageView?.image = image
                 cell.setNeedsLayout()
             }
         }
-
         return cell
     }
     
@@ -148,29 +145,4 @@ class CharacterViewController: UIViewController, UITableViewDelegate, UITableVie
             }
         }.resume()
     }
-    
-    func downloadEpisodes() {
-        for i in 1...41 {
-            let urlString = "https://rickandmortyapi.com/api/episode/\(i)"
-            guard let url = URL(string: urlString) else { continue }
-            URLSession.shared.dataTask(with: url) { data, response, error in
-                guard let data = data, error == nil else { return }
-                do {
-                    let decoder = JSONDecoder()
-                    let response = try decoder.decode(EpisodesResponse.self, from: data)
-                    let episode = response.results[0]// Get the first episode from the results array
-                    self.episodes[episode.name] = episode // Add the episode to the dictionary with the name as the key
-                    DispatchQueue.main.async {
-                        self.table.reloadData()
-                    }
-                } catch {
-                    print("Error decoding episode: \(error)")
-                }
-            }.resume()
-        }
-    }
-
-
-
-    
 }

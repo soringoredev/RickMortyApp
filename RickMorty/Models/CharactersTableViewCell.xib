@@ -23,26 +23,26 @@
                         </constraints>
                     </imageView>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rLA-F9-xhV">
-                        <rect key="frame" x="120" y="4" width="61" height="22"/>
+                        <rect key="frame" x="120" y="4" width="61" height="21"/>
                         <fontDescription key="fontDescription" type="boldSystem" pointSize="21"/>
                         <color key="textColor" red="0.94901961089999998" green="0.64705884459999996" blue="0.2352941036" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6su-By-HMQ">
-                        <rect key="frame" x="120" y="28" width="61" height="21"/>
+                        <rect key="frame" x="120" y="27" width="61" height="21"/>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="253" text="Episode" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="N2A-0h-7VN">
-                        <rect key="frame" x="120" y="56" width="61" height="21"/>
-                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="253" text="Status" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="N2A-0h-7VN">
+                        <rect key="frame" x="120" y="55" width="61" height="22"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="18"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6EG-8F-P1D">
                         <rect key="frame" x="120" y="79" width="61" height="21"/>
-                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
@@ -70,10 +70,9 @@
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
                 <outlet property="characterImageView" destination="bVP-kJ-i4e" id="snV-WR-DQm"/>
-                <outlet property="episodeLabel" destination="N2A-0h-7VN" id="mBL-1c-df1"/>
-                <outlet property="firstSeenInLabel" destination="6EG-8F-P1D" id="Jgp-9l-xty"/>
                 <outlet property="lastKnownLocationLabel" destination="6su-By-HMQ" id="yNe-8M-uuB"/>
                 <outlet property="nameLabel" destination="rLA-F9-xhV" id="FHh-BN-g5m"/>
+                <outlet property="statusLabel" destination="6EG-8F-P1D" id="VhD-1p-A5p"/>
             </connections>
             <point key="canvasLocation" x="-3250.3816793893129" y="-144.36619718309859"/>
         </tableViewCell>

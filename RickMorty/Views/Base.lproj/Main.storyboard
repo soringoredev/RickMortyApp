@@ -4,7 +4,6 @@
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
-        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -18,12 +17,12 @@
                         <subviews>
                             <tableView clipsSubviews="YES" tag="1" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="bsc-CQ-0NC">
                                 <rect key="frame" x="0.0" y="44" width="390" height="756"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <color key="backgroundColor" red="0.92325597699999995" green="0.97001852450000003" blue="0.72161571359999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <sections/>
                             </tableView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" red="0.92325597702591056" green="0.97001852448453607" blue="0.72161571356135767" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
                             <constraint firstItem="bsc-CQ-0NC" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="91x-cc-dC2"/>
                             <constraint firstItem="bsc-CQ-0NC" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="M3K-Q3-e9e"/>
@@ -59,9 +58,4 @@
             <point key="canvasLocation" x="-349.23076923076923" y="-73.222748815165872"/>
         </scene>
     </scenes>
-    <resources>
-        <systemColor name="systemBackgroundColor">
-            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
-    </resources>
 </document>
